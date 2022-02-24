@@ -1,12 +1,15 @@
-const debug = require("debug");
+require("dotenv").config();
+const debug = require("debug")("vacunas:root");
+const appOptions = require("./utils/appOptions");
+const chalk = require("chalk");
 
 (async () => {
   try {
-    const options = await appOptions();
+    debug(chalk.bgBlack.greenBright("Bienvenido a EA Vacunation Database"));
+    const { options: selectedOption } = await appOptions();
+    //await connectDataBase(dbUrl);
 
-    await connectDataBase(dbUrl);
-
-    debug("Bienvenido a EA Vacunation Database");
+    debug(selectedOption);
   } catch (error) {
     debug(`Error: ${error.message}`);
   }
