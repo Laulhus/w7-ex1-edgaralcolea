@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-
+const debug = require("debug")("vacunas:db");
 const connectDataBase = (connectString) =>
   new Promise((resolve, reject) => {
     mongoose.connect(connectString, (error) => {
