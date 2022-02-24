@@ -6,8 +6,28 @@ const ciudadSchema = new Schema({
     required: true,
   },
   puntosVacunacion: {
+    type: [puntoVacunacionSchema],
+  },
+});
+
+const puntoVacunacionSchema = new Schema({
+  nombre: {
+    type: String,
+  },
+  localizacion: {
+    type: localizacionSchema,
+  },
+  vacunas: {
     type: Array,
-    required: true,
+  },
+});
+
+const localizacionSchema = new Schema({
+  coordenadas: {
+    type: [Schema.Types.Number],
+  },
+  direccion: {
+    type: String,
   },
 });
 
