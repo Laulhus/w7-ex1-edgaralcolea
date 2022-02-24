@@ -1,0 +1,15 @@
+{
+  "name": "exercise-vacunas",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "coverage": "jest --watchAll --coverage",
+    "start": "node .",
+    "start-dev": "nodemon . -q"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
